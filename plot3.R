@@ -1,0 +1,7 @@
+source("readfile.R")
+png("plot3.png")
+plot(power.sub$datetime,power.sub$Sub_metering_1,type="l",xlab="",ylab="Energy sub metering")
+lines(power.sub$datetime,power.sub$Sub_metering_2,col="Red")
+lines(power.sub$datetime,power.sub$Sub_metering_3,col="Blue")
+legend("topright",c('Sub_metering_1','Sub_metering_2','Sub_metering_3'),lty="solid",col=c("black","red","blue"))
+dev.off()
